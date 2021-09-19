@@ -1,0 +1,24 @@
+.header-container {
+    height: 3rem;
+}
+
+.header-contents {
+    align-items: center;
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}

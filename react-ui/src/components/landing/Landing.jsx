@@ -1,4 +1,5 @@
 import TopNewsOfTheDay from "../news/TopNewsOfTheDay";
+import Weather from "../weather/Weather";
 
 const Landing = () => {
 
@@ -6,6 +7,7 @@ const Landing = () => {
         <>
             <h1>Hello Landing</h1>
             <TopNewsOfTheDay />
+            <Weather />
         </>
     )
 }

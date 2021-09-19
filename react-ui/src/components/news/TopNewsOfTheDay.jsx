@@ -25,32 +25,39 @@ const TopNewsOfTheDay = () => {
 
     return (
         <div className="top-news-container">
-            {isLoading ? <i class="icon-spinner icon-spin icon-large"></i> : 
+            {isLoading ? <h1>Loading...</h1> : 
             <div className="news-card" key={newsArticles.source.name + newsArticles.publishedAt}>
                 <div className="news-image">
                     <img src={newsArticles.image} alt={newsArticles.title} />
                 </div>
                 <div className="news-title">
-                    <a href={newsArticles.url} rel="noreferrer" target="_blank" ><h3>{newsArticles.title}</h3></a> - <a href={newsArticles.source.url} rel="noreferrer" target="_blank" >{newsArticles.source.name}</a>
+                    <h3>{newsArticles.title}</h3> - <a href={newsArticles.source.url} rel="noreferrer" target="_blank" >{newsArticles.source.name}</a>
                 </div>
                 <div className="news-content">
-                    <p>{newsArticles.content}</p>
+                    <a href={newsArticles.url}>{newsArticles.content}</a>
                 </div>
             </div>
             }
             <div className="article-buttons">
-            <button
+                <button
+                    onClick={() => setSelectedArticle(0)}
+                >
+                </button>
+                <button
                     onClick={() => setSelectedArticle(1)}
                 >
-                    {/* <i className="fas fa-chevron-left fa-5x"></i> */}
                 </button>
                 <button
                     onClick={() => setSelectedArticle(2)}
                 >
-                    {/* <i className="fas fa-chevron-right fa-5x"></i> */}
-
-                    {/* Invalid DOM property class. did you mean className? */}
-
+                </button>
+                <button
+                    onClick={() => setSelectedArticle(3)}
+                >
+                </button>
+                <button
+                    onClick={() => setSelectedArticle(4)}
+                >
                 </button>
             </div>
         </div>
